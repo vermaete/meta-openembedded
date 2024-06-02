@@ -20,10 +20,7 @@ PACKAGECONFIG ??= ""
 PACKAGECONFIG[http2] = ",,,python3-h2"
 PACKAGECONFIG[socks] = ",,,python3-socksio"
 PACKAGECONFIG[asyncio] = ",,,python3-anyio"
-# Don't provide "trio" PACKAGECONFIG as nothing provides "python3-trio" currently.
-# If somebody needs this please feel free to add python3-trio and enable the
-# packageconfig below:
-#PACKAGECONFIG[trio] = ",,,python3-trio"
+PACKAGECONFIG[trio] = ",,,python3-trio"
 
 RDEPENDS:${PN} += "\
     python3-certifi \
